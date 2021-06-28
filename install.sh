@@ -4,7 +4,6 @@ then
   if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
   then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    cartridge insert Projudah/judah-base-env
-    . /cartridges/judah-base-env/setup.sh
+    SHOP_ID=1 rake dev:orders:generate_dummy_orders
   fi
 fi
